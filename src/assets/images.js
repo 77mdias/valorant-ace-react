@@ -36,7 +36,7 @@ import neonSageJettArt from './hero/neon-sage-jett-art.avif'
 
 // Maps
 import bind from './maps/bind.webp'
-import ascent from './maps/ascent.webp'
+import ascent from './maps/Ascent.webp'
 import haven from './maps/haven.jpg'
 import split from './maps/split.jpg'
 import icebox from './maps/icebox.jpg'
