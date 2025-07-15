@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Valorant Academy",
+    "imageKey": "valorantAcademy"
+  },
+  {
+    "id": 2,
+    "name": "ACE",
+    "imageKey": "ace"
+  }
+]

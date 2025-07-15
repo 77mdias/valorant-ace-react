@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Bind",
+    "roles": [
+      "Competitive",
+      "Popular"
+    ],
+    "imageKey": "bind",
+    "caracteristicsTitle": "Mapa com duas bombsites conectadas por teleports",
+    "caracteristics": [
+      "Teleports únicos",
+      "Controle de meio limitado",
+      "Rotações rápidas"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ascent",
+    "roles": [
+      "Competitive",
+      "Popular"
+    ],
+    "imageKey": "ascent",
+    "caracteristicsTitle": "Mapa clássico com meio aberto e muitos ânguloss",
+    "caracteristics": [
+      "Meio aberto",
+      "Muitos ângulos",
+      "Controle de mapa importante"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Haven",
+    "roles": [
+      "Competitive",
+      "Complexo"
+    ],
+    "imageKey": "haven",
+    "caracteristicsTitle": "Único mapa com três bombsites (A, B, C)",
+    "caracteristics": [
+      "Três bombsites",
+      "Múltiplas rotações",
+      "Estratégias complexas"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Split",
+    "roles": [
+      "Competitive",
+      "Vertical"
+    ],
+    "imageKey": "split",
+    "caracteristicsTitle": "Mapa vertical com elevações e rampas",
+    "caracteristics": [
+      "Múltiplas elevações",
+      "Rampas",
+      "Controle de meio limitado"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Icebox",
+    "roles": [
+      "Competitive",
+      "Gelado"
+    ],
+    "imageKey": "icebox",
+    "caracteristicsTitle": "Mapa gelado com containers e elevações",
+    "caracteristics": [
+      "Containers como cover",
+      "Múltiplas elevações",
+      "Terreno gelado"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Corrode",
+    "roles": [
+      "Competitive",
+      "Complexo"
+    ],
+    "imageKey": "corrode",
+    "caracteristicsTitle": "Mapa com dois bombsites afastados e meio aberto",
+    "caracteristics": [
+      "Controle de meio essencial",
+      "Rotações longas e lentas",
+      "Estratégias complexas"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Pearl",
+    "roles": [
+      "Casual",
+      "Popular"
+    ],
+    "imageKey": "pearl",
+    "caracteristicsTitle": "Um dos mapas mais simples do VALORANT",
+    "caracteristics": [
+      "Controle de meio essencial",
+      "Execução rapida com skills",
+      "Estratégias complexas de batidas"
+    ]
+  }
+]

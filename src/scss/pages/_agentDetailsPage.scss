@@ -1,0 +1,285 @@
+// ===== ESTILOS PARA PÁGINA DE DETALHES DO AGENTE =====
+
+.agent-details {
+  .agent-hero {
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+
+    .agent-banner {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+      }
+    }
+
+    .agent-info-overlay {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      color: white;
+
+      h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+
+      .agent-role {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        border-radius: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &.duelist { background-color: var(--duelist-color); }
+        &.sentinel { background-color: var(--sentinel-color); }
+        &.initiator { background-color: var(--initiator-color); }
+        &.controller { background-color: var(--controller-color); }
+      }
+    }
+  }
+
+  .agent-info-section {
+    padding: 3rem 2rem;
+    background-color: var(--bg-primary);
+
+    h2 {
+      color: var(--text-primary);
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .agent-description {
+      max-width: 800px;
+      margin: 0 auto 4rem;
+
+      p {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+
+    .agent-abilities-section {
+      margin-bottom: 4rem;
+
+      .abilities-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+
+        .ability-card {
+          background-color: var(--bg-card);
+          border-radius: 15px;
+          border: 1px solid var(--border-color);
+          padding: 1.5rem;
+          display: flex;
+          gap: 1.5rem;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+          }
+
+          .ability-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+          }
+
+          .ability-info {
+            flex: 1;
+
+            h3 {
+              color: var(--text-primary);
+              font-size: 1.2rem;
+              margin-bottom: 0.5rem;
+            }
+
+            p {
+              color: var(--text-secondary);
+              font-size: 0.9rem;
+              margin-bottom: 1rem;
+            }
+
+            .ability-details {
+              display: flex;
+              gap: 1rem;
+
+              span {
+                font-size: 0.8rem;
+                padding: 0.2rem 0.8rem;
+                border-radius: 10px;
+                background-color: var(--bg-secondary);
+                color: var(--text-secondary);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .agent-strategies {
+      margin-bottom: 4rem;
+
+      .strategies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+
+        .strategy-card {
+          background-color: var(--bg-card);
+          border-radius: 15px;
+          border: 1px solid var(--border-color);
+          padding: 1.5rem;
+
+          h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+          }
+
+          .strategy-tips {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+
+            .tip {
+              display: flex;
+              align-items: center;
+              gap: 0.8rem;
+              color: var(--text-secondary);
+              font-size: 0.9rem;
+
+              i {
+                color: var(--accent-primary);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .agent-tutorials {
+      .tutorials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+
+        .tutorial-card {
+          background-color: var(--bg-card);
+          border-radius: 15px;
+          border: 1px solid var(--border-color);
+          overflow: hidden;
+
+          .tutorial-thumbnail {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            cursor: pointer;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.3s ease;
+            }
+
+            .play-overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0,0,0,0.5);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              opacity: 0;
+              transition: opacity 0.3s ease;
+
+              i {
+                color: white;
+                font-size: 3rem;
+              }
+            }
+
+            &:hover {
+              img {
+                transform: scale(1.1);
+              }
+
+              .play-overlay {
+                opacity: 1;
+              }
+            }
+          }
+
+          h3 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin: 1rem;
+          }
+
+          p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0 1rem 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .agent-details {
+    .agent-hero {
+      height: 40vh;
+
+      .agent-info-overlay {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .agent-info-section {
+      padding: 2rem 1rem;
+
+      .abilities-grid,
+      .strategies-grid,
+      .tutorials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+} 
