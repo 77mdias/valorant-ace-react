@@ -27,6 +27,10 @@
     }
 }
 
+.sidebar-open {
+    overflow: visible !important;
+}
+
 .sidebar {
     // ===== BASE (MOBILE FIRST) =====
     background-color: var(--bg-card);
@@ -63,9 +67,7 @@
 
     // ===== BOTÃO FECHAR =====
     .close-btn {
-        position: absolute;
         top: 15px;
-        width: 32px;
         height: 32px;
         background: var(--bg-secondary);
         border: 1px solid var(--border-color);
@@ -109,7 +111,7 @@
         border-bottom-right-radius: 12px;
 
         // Espaço extra no topo para o botão fechar
-        padding-top: 55px;
+        padding-top: 2.4rem;
 
         // Compactar um pouco em mobile
         .nav-links li a {
@@ -140,6 +142,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        margin-top: 1rem;
 
         li {
             position: relative;

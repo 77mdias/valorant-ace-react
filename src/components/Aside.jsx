@@ -1,6 +1,22 @@
 import { Link } from "react-router-dom";
 
 export default function Aside() {
+  // Ao clicar em algum link, o sidebar deve fechar e o overlay deve desaparecer
+  const handleLinkClick = () => {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const body = document.body;
+
+    if (sidebar) {
+      sidebar.classList.remove('active');
+    }
+    if (overlay) {
+      overlay.classList.remove('active');
+    }
+    body.classList.remove('sidebar-open');
+  }
+
+
   return (
     <>
       {/* <!-- Overlay para mobile --> */}
@@ -20,23 +36,23 @@ export default function Aside() {
               <input type="text" placeholder="Buscar..." />
             </div>
             <li>
-              <Link to="/"> <i className="fas fa-home"></i> Início </Link>
+              <Link to="/" onClick={handleLinkClick}> <i className="fas fa-home"></i> Início </Link>
             </li>
             <li>
-              <Link to="/agents">
+              <Link to="/agents" onClick={handleLinkClick}>
                 <i className="fas fa-user-secret"></i> Agentes
               </Link>
             </li>
             <li>
-              <Link to="/functions">
+              <Link to="/functions" onClick={handleLinkClick}>
                 <i className="fas fa-shield-alt"></i> Funções
               </Link>
             </li>
             <li>
-              <Link to="/maps"> <i className="fas fa-map"></i> Mapas </Link>
+              <Link to="/maps" onClick={handleLinkClick}> <i className="fas fa-map"></i> Mapas </Link>
             </li>
             <li>
-              <Link to="/settings">
+              <Link to="/settings" onClick={handleLinkClick}>
                 <i className="fas fa-cog"></i> Configurações
               </Link>
             </li>

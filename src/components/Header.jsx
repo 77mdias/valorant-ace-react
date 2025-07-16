@@ -1,11 +1,50 @@
 import { Link } from "react-router-dom";
 import { logoImages } from "../assets/images";
 import databaseLogo from "../databaseLogo.json";
-import Profile from "../screens/Profile/Profile";
+import SidebarToggle from "../js/modules/SidebarToggle";
+import { useRef, useEffect } from "react";
+
 
 export default function Header() {
   const logo = databaseLogo.find((logo) => logo.id === 1);
   const logo2 = databaseLogo.find((logo) => logo.id === 2);
+
+  const sidebarToggleRef = useRef(null);
+  useEffect(() => {
+    // Aguardar um pequeno delay para garantir que o DOM está completamente renderizado
+    const timer = setTimeout(() => {
+      const toggleBtn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      
+      console.log('🔍 Verificando elementos:', { 
+        toggleBtn: !!toggleBtn, 
+        sidebar: !!sidebar 
+      });
+      
+      if (toggleBtn && sidebar) {
+        const instance = new SidebarToggle();
+        sidebarToggleRef.current = instance;
+        console.log('✅ SidebarToggle inicializado com sucesso');
+      } else {
+        console.warn('⚠️ Elementos não encontrados, tentando novamente...');
+        // Tentar novamente em 500ms
+        setTimeout(() => {
+          if (document.getElementById('sidebarToggle') && document.getElementById('sidebar')) {
+            const instance = new SidebarToggle();
+            sidebarToggleRef.current = instance;
+            console.log('✅ SidebarToggle inicializado na segunda tentativa');
+          }
+        }, 500);
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      // cleanup: remove event listener
+      sidebarToggleRef.current?.destroy?.();
+    };
+  }, []);
+
 
   return (
     <>
