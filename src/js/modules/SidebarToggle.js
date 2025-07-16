@@ -44,14 +44,14 @@ export default class SidebarToggle {
     // Adicionar suporte para touch em mobile
     this.addTouchSupport();
 
-    // Debug log
+    /* // Debug log
     console.log('✅ SidebarToggle inicializado', {
       sidebar: !!this.sidebar,
       closeBtn: !!this.closeBtn,
       toggleBtn: !!this.toggleBtn,
       overlay: !!this.overlay
     });
-
+ */
 
   }
 

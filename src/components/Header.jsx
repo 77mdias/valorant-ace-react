@@ -24,7 +24,6 @@ export default function Header() {
       if (toggleBtn && sidebar) {
         const instance = new SidebarToggle();
         sidebarToggleRef.current = instance;
-        console.log('✅ SidebarToggle inicializado com sucesso');
       } else {
         console.warn('⚠️ Elementos não encontrados, tentando novamente...');
         // Tentar novamente em 500ms

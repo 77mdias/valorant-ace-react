@@ -7,7 +7,7 @@ let isInitialized = false;
 function initThemeToggle() {
   // Prevenir múltiplas inicializações
   if (isInitialized) {
-    console.warn('⚠️ SwitchTheme já foi inicializado');
+    console.log('⚠️ SwitchTheme já foi inicializado');
     return;
   }
 
