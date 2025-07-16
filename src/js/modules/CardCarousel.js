@@ -40,7 +40,6 @@ export default class CardCarousel {
       const firstCard = this.wrapper.children[0];
       if (!firstCard) return;
 
-      const cardStyle = window.getComputedStyle(firstCard);
       const wrapperStyle = window.getComputedStyle(this.wrapper);
 
       this.cardWidth = firstCard.offsetWidth;
@@ -252,22 +251,37 @@ export default class CardCarousel {
   addTouchEvents() {
     let startX = 0;
     let endX = 0;
+    let startTime = 0;
+    let endTime = 0;
 
     this.carousel.addEventListener('touchstart', (e) => {
       startX = e.touches[0].clientX;
-    });
+      startTime = Date.now();
+    }, { passive: true });
+
+    this.carousel.addEventListener('touchmove', (e) => {
+      // Prevenir scroll vertical durante swipe horizontal
+      if (Math.abs(e.touches[0].clientX - startX) > 10) {
+        e.preventDefault();
+      }
+    }, { passive: false });
 
     this.carousel.addEventListener('touchend', (e) => {
       endX = e.changedTouches[0].clientX;
+      endTime = Date.now();
+      
       const diff = startX - endX;
+      const timeDiff = endTime - startTime;
+      const velocity = Math.abs(diff) / timeDiff;
 
-      if (Math.abs(diff) > 50) {
+      // Swipe deve ser rápido o suficiente e ter distância mínima
+      if (Math.abs(diff) > 30 && velocity > 0.1) {
         if (diff > 0) {
           this.smoothNext();
         } else {
           this.smoothPrev();
         }
       }
-    });
+    }, { passive: true });
   }
 }

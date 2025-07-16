@@ -1,7 +1,11 @@
 import Card from "../components/Card"
 import { heroImages } from "../assets/images"
+import useCarousel from "../hooks/useCarousel"
 
 export default function Home() {
+  // Inicializar carrossel quando o componente montar
+  useCarousel();
+
   return (
     <>
       {/* <!-- Hero Section estilo Crunchyroll --> */}

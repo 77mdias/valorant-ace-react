@@ -44,3 +44,42 @@ body {
     min-height: 100vh;
 }
 
+// ===== MELHORIAS PARA DISPOSITIVOS TOUCH =====
+.touch-device {
+    // Melhorar área de toque para todos os botões
+    button {
+        min-height: 44px;
+        min-width: 44px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    // Melhorar links em mobile
+    a {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    // Desabilitar seleção de texto em elementos interativos
+    .btn, .nav-links, .dropdown-toggle, .carousel-nav, .hamburger-btn {
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+}
+
+// ===== MELHORIAS GERAIS PARA MOBILE =====
+@media (max-width: 768px) {
+    // Melhorar tamanho de toque para todos os elementos interativos
+    button, a, .btn {
+        min-height: 44px;
+        padding: 12px 16px;
+    }
+
+    // Melhorar scroll em mobile
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+

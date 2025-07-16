@@ -43,8 +43,10 @@
 // ===== BOTÃO HAMBURGER =====
     .hamburger-btn {
         display: none;
-        width: 40px;
-        height: 40px;
+        min-width: 44px;
+        min-height: 44px;
+        width: 44px;
+        height: 44px;
         background: var(--bg-secondary);
         border: 1px solid var(--border-color);
         border-radius: 8px;
@@ -52,11 +54,17 @@
         transition: all 0.2s ease;
         position: relative;
         z-index: 1001;
+        
+        // Melhorar área de toque em mobile
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
 
         i {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--text-primary);
             transition: color 0.2s ease;
+            pointer-events: none; // Evitar problemas de eventos em mobile
         }
 
         &:hover {
@@ -71,6 +79,7 @@
 
         &:active {
             transform: scale(0.95);
+            background: var(--accent-primary);
         }
 
         &.active {

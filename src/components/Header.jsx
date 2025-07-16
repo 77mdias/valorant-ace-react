@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { logoImages } from "../assets/images";
 import databaseLogo from "../databaseLogo.json";
 import Profile from "../screens/Profile/Profile";
-import "../js/main.js"
 
 export default function Header() {
   const logo = databaseLogo.find((logo) => logo.id === 1);
