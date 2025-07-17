@@ -1,3 +1,6 @@
+@import "../utils/variables";
+@import "../utils/responsive";
+
 // ===== ESTILOS PARA PÁGINA DE AGENTES =====
 .filters-section {
   padding: 2rem;
@@ -113,6 +116,7 @@
           opacity: 0;
           transition: opacity 0.3s ease;
 
+
           .learn-btn {
             background-color: var(--accent-primary);
             color: white;
@@ -173,6 +177,22 @@
           }
         }
       }
+    }
+
+    @include mobile-only {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @include mobile-only  {
+    .agents-container .agent-card .agent-image .agent-overlay {
+      opacity: 1;
+    }
+  }
+  @include tablet-only {
+    .agents-container .agent-card .agent-image .agent-overlay {
+      opacity: 1;
     }
   }
 }

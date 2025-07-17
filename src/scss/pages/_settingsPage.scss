@@ -1,3 +1,6 @@
+@import "../utils/variables";
+@import "../utils/responsive";
+
 // ===== ESTILOS PARA PÁGINA DE CONFIGURAÇÕES =====
 .settings-section {
   padding: 2rem;
@@ -233,6 +236,10 @@
           }
         }
       }
+    }
+
+    @include mobile-only {
+      grid-template-columns: 1fr;
     }
   }
 }

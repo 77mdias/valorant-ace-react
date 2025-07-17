@@ -1,3 +1,6 @@
+@import "../utils/variables";
+@import "../utils/responsive";
+
 // ===== ESTILOS PARA PÁGINA DE MAPAS =====
 .maps-grid {
   padding: 2rem;
@@ -145,6 +148,11 @@
         }
       }
     }
+
+    @include mobile-only {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -225,6 +233,12 @@
           }
         }
       }
+    }
+
+    @include mobile-only {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
   }
 }

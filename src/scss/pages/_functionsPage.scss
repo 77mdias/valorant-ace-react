@@ -1,3 +1,6 @@
+@import "../utils/variables";
+@import "../utils/responsive";
+
 // ===== ESTILOS PARA PÁGINA DE FUNÇÕES =====
 .roles-grid {
   padding: 2rem;
@@ -51,6 +54,10 @@
           font-size: 0.8rem;
           font-weight: 600;
           margin-left: auto;
+        }
+
+        @include mobile-only {
+          display: block;
         }
       }
 
@@ -166,6 +173,12 @@
         }
       }
     }
+
+    @include mobile-only {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
   }
 }
 
@@ -227,6 +240,12 @@
           font-weight: 600;
         }
       }
+    }
+
+    @include mobile-only {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
   }
 }
