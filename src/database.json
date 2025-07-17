@@ -1322,5 +1322,73 @@
         "thumbnail": "/assets/tutorials/way-soundcontrol.jpg"
       }
     ]
+  },
+  {
+    "id": 25,
+    "name": "Raze",
+    "role": "Duelist",
+    "skills": "Explosivos e mobilidade",
+    "dica": "Use explosivos para abrir espaço e eliminar múltiplos inimigos.",
+    "biography": "Raze, vinda do Brasil, é especialista em demolição e adora causar caos no campo de batalha. Com seu arsenal de explosivos, ela é perfeita para abrir espaço e garantir eliminações rápidas.",
+    "imageKey": "raze-card",
+    "abilities": [
+      {
+        "name": "Carga de Explosivos",
+        "icon": "fas fa-bomb",
+        "cost": 200,
+        "charges": 2
+      },
+      {
+        "name": "Granada de Fragmentação",
+        "icon": "fas fa-bomb",
+        "cost": 250,
+        "charges": 1
+      },
+      {
+        "name": "Bumba",
+        "icon": "fas fa-robot",
+        "cost": 300,
+        "charges": 1
+      },
+      {
+        "name": "Estrondo Final",
+        "icon": "fas fa-rocket",
+        "cost": 8,
+        "charges": 1,
+        "isUltimate": true
+      }
+    ],
+    "strategies": [
+      {
+        "title": "Entrada Explosiva",
+        "description": "Use suas habilidades para forçar inimigos a sair de posições seguras.",
+        "tips": [
+          "Combine Carga de Explosivos com movimentação agressiva.",
+          "Use a Granada de Fragmentação para limpar cantos.",
+          "O Bumba pode ser usado para obter informação e pressionar inimigos."
+        ]
+      },
+      {
+        "title": "Ultimate Impactante",
+        "description": "O Estrondo Final pode garantir eliminações múltiplas em situações de clutch ou retake.",
+        "tips": [
+          "Use o ultimate em áreas fechadas para maximizar o dano.",
+          "Combine com informações da equipe para pegar inimigos desprevenidos.",
+          "Não tenha medo de usar o Estrondo Final para abrir espaço em rounds decisivos."
+        ]
+      }
+    ],
+    "tutorials": [
+      {
+        "title": "Combos Explosivos",
+        "description": "Aprenda a combinar Carga de Explosivos com Granada de Fragmentação para eliminações rápidas.",
+        "thumbnail": "razeCombo"
+      },
+      {
+        "title": "Domínio do Bumba",
+        "description": "Como usar o Bumba para obter informação e pressionar inimigos.",
+        "thumbnail": "razeBumba"
+      }
+    ]
   }
 ]

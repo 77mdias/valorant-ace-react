@@ -23,6 +23,7 @@ import wayleyCard from './cards/wayley.jpg'
 import harborCard from './cards/harbor.webp'
 import gekkoCard from './cards/gekko.webp'
 import deadlockCard from './cards/deadlock.jpg'
+import razeCard from './cards/raze-card.jpeg'
 
 // Logo
 import valorantAcademyLogo from './logoPage/Valorant-Academy.png'
@@ -49,6 +50,8 @@ import jettOperator from './tutorials/jett-operator.jpg'
 import jettMobility from './tutorials/jett-skills.jpg'
 import sovaSpots from './tutorials/sova-spots.jpg'
 import sovaDrone from './tutorials/sova-drone.webp'
+import razeCombo from './tutorials/raze-skills.jpg'
+import razeBumba from './tutorials/raze-art.gif'
 
 export const cardImages = {
   'jett-card': jettCard,
@@ -74,7 +77,8 @@ export const cardImages = {
   'wayley-card': wayleyCard,
   'harbor-card': harborCard,
   'gekko-card': gekkoCard,
-  'deadlock-card': deadlockCard
+  'deadlock-card': deadlockCard,
+  'raze-card': razeCard
 }
 
 export const heroImages = {
@@ -104,5 +108,7 @@ export const tutorialImages = {
   jettOperator: jettOperator,
   jettMobility: jettMobility,
   sovaSpots: sovaSpots,
-  sovaDrone: sovaDrone
+  sovaDrone: sovaDrone,
+  razeCombo: razeCombo,
+  razeBumba: razeBumba
 }
